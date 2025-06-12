@@ -32,7 +32,6 @@ div#mainBody {
 div#leftContainer, 
 div#rightContainer {
   margin: 0 auto;
-  gap: 100px;
   
 }
 
@@ -110,31 +109,19 @@ header{
 
   div#rightContainer {
     gap: 10px;
-    padding-bottom: 30px;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(3, 160px);
       grid-template-areas: 
       'b c'
       'd e'
       'f g';
-      
   }
-  .one {
-    grid-area: b;
-    width: 250px; }
-  .two { grid-area: c;
-    width: 250px; }
-  .three { grid-area: d;
-    width: 250px; }
-  .four { grid-area: e;
-    width: 250px; }
-  .five { grid-area: f;
-    width: 250px;}
-  .six { grid-area: g;
-    width: 250px; }
+.one, .two, .three, .four, .five, .six {
+  width: 250px;
+}
 
   .display_md {
-      display: none;
+      display:none;
       
   }
 }
@@ -144,35 +131,26 @@ header{
   body {
       width: 80%;
   }
-
-  header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      
+  header{
+    margin: 0 auto;
   }
 
-  nav {
-      justify-content: flex-start;
-  }
+#rightContainer {
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 180px);
+    grid-template-areas: 
+    'b c'
+    'd e'
+    'f g';
+    
+}
+.one, .two, .three, .four, .five, .six {
+  width: 150px;
+}
 
-  #mainBody {
-      flex-direction: column;
-      gap: 20px;
-  }
 
-  #leftContainer,
-  #rightContainer {
-      width: 100%;
-  }
-
-  #rightContainer {
-    gap: 10px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 160px);
-  }
-  
-  .display_md {
-      display: none;
-  }
+.display_md {
+    display: none;
+}
 }
